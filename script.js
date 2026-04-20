@@ -7,7 +7,7 @@ const slides = [
     text: "Il y a des gens qui arrivent dans ta vie et qui la changent pour toujours. Toi, tu en fais partie."
   },
   {
-    image: "images/image2.jpg.PNG",
+    image: "images/image2.jpg.jpg",
     text: "Ce sourire-là… impossible de l'oublier. Même quand tu fais semblant de ne pas être fier(e) de toi. 😄"
   },
   {
