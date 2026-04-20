@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joyeux Anniversaire 🎉</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ╔══════════════════════════════════════════╗ -->
+  <!-- ║         ÉCRAN D'INTRODUCTION             ║ -->
+  <!-- ╚══════════════════════════════════════════╝ -->
+  <div id="intro-screen">
+    <div class="intro-content">
+      <div class="confetti-burst" id="confetti-container"></div>
+      <p class="intro-sub">L'HISTOIRE DE JEANNE ET CLEMENT...</p>
+      <h1 class="intro-title">Joyeux<br/>Anniversaire<br/><span class="intro-name">✨</span></h1>
+      <button id="btn-start" onclick="startSlideshow()">Commencer →</button>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════╗ -->
+  <!-- ║           SLIDESHOW PRINCIPAL            ║ -->
+  <!-- ╚══════════════════════════════════════════╝ -->
+  <div id="slideshow" class="hidden">
+
+    <!-- Image en fond plein écran -->
+    <div id="slide-bg" class="slide-bg"></div>
+    <div id="slide-bg-next" class="slide-bg slide-bg-next"></div>
+
+    <!-- Overlay dégradé bas -->
+    <div class="overlay-gradient"></div>
+
+    <!-- Contenu texte -->
+    <div class="slide-content">
+      <div id="slide-text-wrapper">
+        <p id="slide-text" class="slide-text"></p>
+      </div>
+    </div>
+
+    <!-- Compteur de progression -->
+    <div id="progress-bar-wrapper">
+      <div id="progress-bar"></div>
+    </div>
+    <div id="progress-counter">1 / 9</div>
+
+    <!-- Boutons navigation -->
+    <button id="btn-prev" onclick="prevSlide()" title="Précédent">&#8592;</button>
+    <button id="btn-next" onclick="nextSlide()" title="Suivant">&#8594;</button>
+
+    <!-- Bouton musique -->
+    <button id="btn-music" onclick="toggleMusic()" title="Musique">🎵</button>
+
+    <!-- Clic n'importe où = slide suivante (sauf sur les boutons) -->
+    <div id="click-zone" onclick="nextSlide()"></div>
+
+    <!-- Écran de fin -->
+    <div id="end-screen" class="hidden">
+      <div class="end-content">
+        <div class="end-emoji">🎂</div>
+        <h2>C'est tout pour aujourd'hui…</h2>
+        <p>Mais les souvenirs, eux, restent pour toujours. ❤️</p>
+        <button onclick="restartSlideshow()">Recommencer depuis le début</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio de fond (fichier optionnel) -->
+  <audio id="bg-music" loop>
+    <!-- Remplace "music.mp3" par ton fichier audio dans le dossier du projet -->
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
